@@ -1,66 +1,24 @@
- body {
-      background: #121212; /* black background */
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  body {
+      background-color: #000; /* Black background */
       color: #fff;
     }
-
     .form-container {
       max-width: 400px;
-      margin: 80px auto;
-      padding: 30px;
-      background: #1e1e1e; /* dark grey card */
+      margin: 60px auto;
+      padding: 25px;
+      background: #111;
       border-radius: 12px;
-      box-shadow: 0 6px 15px rgba(255, 102, 0, 0.4);
-      text-align: center;
+      box-shadow: 0 4px 12px rgba(255, 140, 0, 0.6);
     }
-
-    .form-title {
-      color: #ff6600;
-      margin-bottom: 20px;
-      font-size: 24px;
-    }
-
-    .form-box {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    .form-box input {
-      padding: 12px;
-      border: 2px solid #ff6600;
-      border-radius: 8px;
-      outline: none;
-      font-size: 14px;
-      background: #121212;
-      color: #fff;
-      transition: 0.3s;
-    }
-
-    .form-box input:focus {
-      border-color: #ff9800;
-      box-shadow: 0 0 8px rgba(255, 102, 0, 0.7);
-    }
-
-    button {
-      padding: 12px;
-      background: #ff6600;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    button:hover {
-      background: #e65100;
-      box-shadow: 0 0 10px rgba(255, 102, 0, 0.8);
-    }
-
-    .error {
-      color: #ff4444;
-      margin-bottom: 10px;
+    .btn-custom {
+      background-color: orange;
+      color: black;
       font-weight: bold;
     }
-    
+    .btn-custom:hover {
+      background-color: #ff8c00;
+      color: white;
+    }
+    .text-danger {
+      font-size: 0.9rem;
+    }
