@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form validation</title>
+</head>
+<body>
+  <!-- <style>
+    .error {
+      color: #ff4444;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+  </style> -->
+  <div>
+    <h1 >Signup form</h1>
+    <p  id="error"></p>
+    <form class="form-box" id="signupForm">
+      <input type="text" placeholder="Name" id="name">
+      <input type="email" placeholder="Email" id="email">
+      <input type="password" placeholder="Password" id="password">
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById("signupForm");
+    const errorElement = document.getElementById("error")
+
+    form.addEventListener("submit",function(e){
+      e.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      if(!name || !email || !password){
+        errorElement.textContent="Feild are required!";
+        return;
+
+      }
+
+      if( !email.includes ("@")){
+        errorElement.textContent="Email does not have @ Or Invalid Email!";
+        return;
+
+      }
+
+      if(password.length < 6){
+        errorElement.textContent="Password mut contain atleast 6 character!";
+        return;
+
+      }
+
+      errorElement.textContent = "";
+      alert("form is submitted successfully!");
+      form.reset();
+
+    });
+    
+  </script>
+</body>
+</html>
